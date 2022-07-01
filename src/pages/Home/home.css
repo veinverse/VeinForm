@@ -27,21 +27,19 @@
 }
 
 .main__text > h2 {
-  font-weight: 250;
-  font-size: 35px;
+  font-family: "Poppins";
+  font-weight: 200;
+  font-size: 25px;
   color: var(--color-white);
   text-align: center;
-  width: 60%;
-  margin-top: 1rem;
 }
 
 .main__text > button {
   width: 12rem;
   height: 3.5rem;
-  background: none;
-
   border-radius: 25px;
   background: var(--color-primary);
+  opacity: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,6 +59,7 @@
 
 .main__text > button:hover {
   box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  opacity: 80%;
 }
 
 .main__text > button:active {
@@ -92,4 +91,24 @@
 
 .main__text-sub > h3 {
   font-weight: 350;
+}
+
+@media screen and (max-width: 830px) {
+  .main__text {
+    margin-top: 30vh;
+  }
+
+  .main__text > h1 {
+    font-size: 70px;
+  }
+  .main__text > h2 {
+    font-size: 16px;
+  }
+  .main__text > button {
+    margin-top: 2rem;
+  }
+
+  .main__text-sub {
+    font-size: 10px;
+  }
 }
