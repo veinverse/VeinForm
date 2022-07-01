@@ -7,7 +7,6 @@ body, .q1__wrapper {
 
 .question__text {
     text-align: center;
-    padding-bottom: 15px;
 }
 
 .title {
@@ -21,6 +20,11 @@ body, .q1__wrapper {
     font-size: 40px;
     font-weight: 500;
     line-height: 60px;
+}
+
+.choice__wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .option {
@@ -58,4 +62,11 @@ body, .q1__wrapper {
     line-height: 38px;
     text-align: center;
     background: transparent;
+}
+.vector {
+    left: 5%;
+    right: 43%;
+    top: 80%;
+    bottom: -70%;
+    transform: rotate(-90deg);
 }
