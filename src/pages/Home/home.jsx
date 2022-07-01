@@ -1,9 +1,13 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./home.css";
 import { MdNavigateNext } from "react-icons/md";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
-const home = () => {
+const Home = () => {
+  const navigate = useNavigate();
+  const navigateToForm = () => {
+    navigate("/form");
+  };
   return (
     <main className="section">
       <div className="main">
@@ -13,7 +17,7 @@ const home = () => {
             We’ll like to know a bit about your business experience with
             technology.
           </h2>
-          <button>
+          <button onClick={navigateToForm}>
             <h1>Get Started </h1>
             <span>
               <MdNavigateNext />
@@ -35,4 +39,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
