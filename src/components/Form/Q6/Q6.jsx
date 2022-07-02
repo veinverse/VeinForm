@@ -11,37 +11,43 @@ const Q6 = () => {
           <input
             type="checkbox"
             value="Challenges in receiving online payments"
-            id="1"
+            id="challenge1"
             name="business issues"
           />
-          <label for="1">Challenges in receiving online payments</label>
+          <label for="challenge1">
+            Challenges in receiving online payments
+          </label>
         </div>
         <div className="option">
           <input
             type="checkbox"
             value="Delay in receiving payments from clients"
-            id="2"
+            id="challenge2"
             name="business issues"
           />
-          <label for="2">Delay in receiving payments from clients</label>
+          <label for="challenge2">
+            Delay in receiving payments from clients
+          </label>
         </div>
         <div className="option">
           <input
             type="checkbox"
             value="Advertisement of my business"
-            id="3"
+            id="challenge3"
             name="business issues"
           />
-          <label for="3">Advertisement of my business</label>
+          <label for="challenge3">Advertisement of my business</label>
         </div>
         <div className="option">
           <input
             type="checkbox"
             value="Difficulty in communicating with clients"
-            id="4"
+            id="challenge4"
             name="business issues"
           />
-          <label for="4">Difficulty in communicating with client</label>
+          <label for="challenge4">
+            Difficulty in communicating with client
+          </label>
         </div>
         <div className="option">
           <input

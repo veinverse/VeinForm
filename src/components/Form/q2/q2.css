@@ -1,9 +1,9 @@
 .q2__wrapper {
-    width: 100vw;
+  width: 100vw;
 }
 
 .grid__container {
-    display: grid;
-    gap: 0 15px;
-    grid-template-columns: auto auto auto;
+  display: grid;
+  gap: 0 15px;
+  grid-template-columns: auto auto auto;
 }

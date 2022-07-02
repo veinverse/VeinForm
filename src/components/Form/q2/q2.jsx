@@ -5,28 +5,28 @@ const Q2 = () => {
     <div className="q__wrapper">
       <h1>Question 2</h1>
       <h2>Where do you mostly hold your business activities?</h2>
-      <p>Select any three (3) regions</p>
+      <p className="select__any3">Select any three (3) regions</p>
       <div className="choice__wrapper grid__container">
         <div className="option grid__item">
           <input
             type="checkbox"
             value="Event Planning"
-            id="1"
+            id="11"
             name="location"
           />
-          <label for="1">Greater Accra</label>
+          <label for="11">Greater Accra</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Eastern" id="2" name="location" />
-          <label for="2">Eastern</label>
+          <input type="checkbox" value="Eastern" id="22" name="location" />
+          <label for="22">Eastern</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Central" id="3" name="location" />
-          <label for="3">Central</label>
+          <input type="checkbox" value="Central" id="33" name="location" />
+          <label for="33">Central</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="North East" id="4" name="location" />
-          <label for="4">North East</label>
+          <input type="checkbox" value="North East" id="44" name="location" />
+          <label for="44">North East</label>
         </div>
         <div className="option grid__item">
           <input type="checkbox" value="Northern" id="5" name="location" />
