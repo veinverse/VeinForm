@@ -8,68 +8,68 @@ const Q2 = () => {
             <p>Select any three (3) regions</p>
             <div className="choice__wrapper grid__container">
                 <div className="option grid__item">
-                    <input type="checkbox" value="Event Planning" id="1" name="location"/>
-                    <label for="1">Greater Accra</label>
+                    <input type="checkbox" value="Event Planning" id="accra" name="location"/>
+                    <label for="accra">Greater Accra</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Eastern" id="2" name="location"/>
-                    <label for="2">Eastern</label>
+                    <input type="checkbox" value="Eastern" id="eastern" name="location"/>
+                    <label for="eastern">Eastern</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Central" id="3" name="location"/>
-                    <label for="3">Central</label>
+                    <input type="checkbox" value="Central" id="central" name="location"/>
+                    <label for="central">Central</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="North East" id="4" name="location"/>
-                    <label for="4">North East</label>
+                    <input type="checkbox" value="North East" id="northEast" name="location"/>
+                    <label for="northEast">North East</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Northern" id="5" name="location"/>
-                    <label for="5">Northern</label>
+                    <input type="checkbox" value="Northern" id="northern" name="location"/>
+                    <label for="northern">Northern</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Ahafo" id="6" name="location"/>
-                    <label for="6">Ahafo</label>
+                    <input type="checkbox" value="Ahafo" id="ahafo" name="location"/>
+                    <label for="ahafo">Ahafo</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Ashanti" id="7" name="location"/>
-                    <label for="7">Ashanti</label>
+                    <input type="checkbox" value="Ashanti" id="ashanti" name="location"/>
+                    <label for="ashanti">Ashanti</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Bono East" id="8" name="location"/>
-                    <label for="8">Bono East</label>
+                    <input type="checkbox" value="Bono East" id="bono" name="location"/>
+                    <label for="bono">Bono East</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Brong Ahafo" id="9" name="location"/>
-                    <label for="9">Brong Ahafo</label>
+                    <input type="checkbox" value="Brong Ahafo" id="brongAhafo" name="location"/>
+                    <label for="brongAhafo">Brong Ahafo</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Oti" id="10" name="location"/>
-                    <label for="10">Oti</label>
+                    <input type="checkbox" value="Oti" id="oti" name="location"/>
+                    <label for="oti">Oti</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Savannah" id="11" name="location"/>
-                    <label for="11">Savannah</label>
+                    <input type="checkbox" value="Savannah" id="savannah" name="location"/>
+                    <label for="savannah">Savannah</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Upper East" id="12" name="location"/>
-                    <label for="12">Upper East</label>
+                    <input type="checkbox" value="Upper East" id="upperEast" name="location"/>
+                    <label for="upperEast">Upper East</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Upper West" id="13" name="location"/>
-                    <label for="13">Upper West</label>
+                    <input type="checkbox" value="Upper West" id="upperWest" name="location"/>
+                    <label for="upperWest">Upper West</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Western" id="14" name="location"/>
-                    <label for="14">Western</label>
+                    <input type="checkbox" value="Western" id="western" name="location"/>
+                    <label for="western">Western</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Western North" id="15" name="location"/>
-                    <label for="15">Western North</label>
+                    <input type="checkbox" value="Western North" id="westernNorth" name="location"/>
+                    <label for="westernNorth">Western North</label>
                 </div>
                 <div className="option grid__item">
-                    <input type="checkbox" value="Volta" id="16" name="location"/>
-                    <label for="16">Volta</label>
+                    <input type="checkbox" value="Volta" id="volta" name="location"/>
+                    <label for="volta">Volta</label>
                 </div>
             </div>
             <button className="next__btn">

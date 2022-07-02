@@ -7,20 +7,20 @@ const Q1 = () => {
       <h2>What do you do?</h2>
       <div className="choice__wrapper">
         <div className="option">
-          <input type="radio" value="Event Planning" id="1" name="career"/>
-          <label for="1">Event Planning</label>
+          <input type="radio" value="Event Planning" id="ep" name="career"/>
+          <label for="ep">Event Planning</label>
         </div>
         <div className="option">
-          <input type="radio" value="Own a Studio" id="2" name="career"/>
-          <label for="2">Own a Studio</label>
+          <input type="radio" value="Own a Studio" id="studio" name="career"/>
+          <label for="studio">Own a Studio</label>
         </div>
         <div className="option">
-          <input type="radio" value="Manage a Restaurant" id="3" name="career"/>
-          <label for="3">Manage a Restaurant</label>
+          <input type="radio" value="Manage a Restaurant" id="restaurant" name="career"/>
+          <label for="restaurant">Manage a Restaurant</label>
         </div>
         <div className="option">
-          <input type="radio" value="Other" id="4" name="career"/>
-          <label for="4">Other</label>
+          <input type="radio" value="Other" id="other" name="career"/>
+          <label for="other">Other</label>
         </div>
       </div>
       <button className="next__btn">
