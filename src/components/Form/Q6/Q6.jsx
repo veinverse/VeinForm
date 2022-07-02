@@ -1,5 +1,3 @@
-import "./q6.css";
-
 const Q6 = () => {
   return (
     <div className="q__wrapper">

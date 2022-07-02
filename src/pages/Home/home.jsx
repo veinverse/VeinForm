@@ -18,7 +18,7 @@ const Home = () => {
             technology.
           </h2>
           <button onClick={navigateToForm}>
-            <h1>Get Started </h1>
+            <h1 className="home__button-text">Get Started </h1>
             <span>
               <MdNavigateNext />
             </span>
