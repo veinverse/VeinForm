@@ -1,8 +1,42 @@
 import "./q1.css";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { useAnimation } from "framer-motion";
+
+const variant = {
+  visible: {
+    x: 0,
+    transition: {
+      type: "aniticipate",
+      duration: 3,
+      bounce: 0.3,
+    },
+    hidden: {
+      x: "-70vw",
+      opacity: 0,
+    },
+  },
+};
 
 const Q1 = () => {
+  const animation = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible");
+    }
+  }, [animation, inView]);
+
   return (
-    <div className="q__wrapper">
+    <motion.div
+      animate={animation}
+      ref={ref}
+      initial="hidden"
+      variants={variant}
+      className="q__wrapper"
+    >
       <h1>Question 1</h1>
       <h2>What do you do?</h2>
       <div className="choice__wrapper">
@@ -44,7 +78,7 @@ const Q1 = () => {
           </svg>
         </span>
       </button>
-    </div>
+    </motion.div>
   );
 };
 
