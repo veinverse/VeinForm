@@ -8,21 +8,21 @@ const q10 = () => {
       </h2>
       <div className="choice__wrapper">
         <div className="option">
-          <input type="radio" value="Event Planning" id="yes" name="useapp" />
-          <label for="yes">Yes</label>
+          <input type="radio" value="Event Planning" id="yes2" name="willing" />
+          <label for="yes2">Yes</label>
         </div>
         <div className="option">
-          <input type="radio" value="Own a Studio" id="maybe" name="useapp" />
-          <label for="maybe">Not really</label>
+          <input type="radio" value="Own a Studio" id="maybe2" name="willing" />
+          <label for="maybe2">Not really</label>
         </div>
         <div className="option">
           <input
             type="radio"
             value="Manage a Restaurant"
-            id="no"
-            name="useapp"
+            id="no2"
+            name="willing"
           />
-          <label for="no">No</label>
+          <label for="no2">No</label>
         </div>
       </div>
       <button className="next__btn">
