@@ -2,64 +2,94 @@ import "./q2.css";
 
 const Q2 = () => {
     return ( 
-        <div className="q2__wrapper">
-            <div className="question__text">
-                <h1 className="title">Question 2</h1>
-                <span className="question">Where do you mostly hold your business activities?</span>
-                <p>Select any three (3) regions</p>
-            </div>
-            <div className="choice__wrapper">
-                <div className="answer__options">
-                    <div className="option">
-                        <div className="option__text">Greater Accra</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Eastern</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Central</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">North East</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Northern</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Ahafo</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Ashanti</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Bono East</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Brong Ahafo</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Oti</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Savannah</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Upper East</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Upper West</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Western</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Western North</div>
-                    </div>
-                    <div className="option">
-                        <div className="option__text">Volta</div>
-                    </div>
+        <div className="q__wrapper">
+            <h1>Question 2</h1>
+            <h2>Where do you mostly hold your business activities?</h2>
+            <p>Select any three (3) regions</p>
+            <div className="choice__wrapper grid__container">
+                <div className="option grid__item">
+                    <input type="checkbox" value="Event Planning" id="1" name="location"/>
+                    <label for="1">Greater Accra</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Eastern" id="2" name="location"/>
+                    <label for="2">Eastern</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Central" id="3" name="location"/>
+                    <label for="3">Central</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="North East" id="4" name="location"/>
+                    <label for="4">North East</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Northern" id="5" name="location"/>
+                    <label for="5">Northern</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Ahafo" id="6" name="location"/>
+                    <label for="6">Ahafo</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Ashanti" id="7" name="location"/>
+                    <label for="7">Ashanti</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Bono East" id="8" name="location"/>
+                    <label for="8">Bono East</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Brong Ahafo" id="9" name="location"/>
+                    <label for="9">Brong Ahafo</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Oti" id="10" name="location"/>
+                    <label for="10">Oti</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Savannah" id="11" name="location"/>
+                    <label for="11">Savannah</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Upper East" id="12" name="location"/>
+                    <label for="12">Upper East</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Upper West" id="13" name="location"/>
+                    <label for="13">Upper West</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Western" id="14" name="location"/>
+                    <label for="14">Western</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Western North" id="15" name="location"/>
+                    <label for="15">Western North</label>
+                </div>
+                <div className="option grid__item">
+                    <input type="checkbox" value="Volta" id="16" name="location"/>
+                    <label for="16">Volta</label>
                 </div>
             </div>
+            <button className="next__btn">
+                <p className="btn__text">
+                Next &nbsp;
+                <span>
+                    <svg
+                    width="19"
+                    height="13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                        d="M9.50005 11.8L18.95 2.34999L17.375 0.87999L9.50005 8.64999L1.62505 0.87999L0.0500489 2.34999L9.50005 11.8Z"
+                        fill="white"
+                    />
+                    </svg>
+                </span>
+                </p>
+            </button>
         </div>
      );
 }
