@@ -19,6 +19,10 @@ h2 {
   line-height: 1;
 }
 
+p {
+  color: var(--color-white);
+}
+
 .choice__wrapper {
   margin: 1.5rem 0 1rem;
 }
@@ -81,6 +85,6 @@ label {
   cursor: pointer;
 }
 .next__btn > p {
-  color: #ffffff;
+  color: var(--color-white);
   font-size: 22px;
 }
