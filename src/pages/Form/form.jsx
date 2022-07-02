@@ -1,6 +1,6 @@
 import "./form.css";
-import Q6 from "../../components/Form/Q6/Q6";
 import Q1 from "../../components/Form/q1/q1";
+import Q6 from "../../components/Form/Q6/Q6";
 
 const Form = () => {
   return (
@@ -13,4 +13,4 @@ const Form = () => {
   );
 };
 
-export default Q6;
+export default Form;
