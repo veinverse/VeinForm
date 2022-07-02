@@ -5,3 +5,9 @@ form {
   background-size: cover;
   background-attachment: fixed;
 }
+
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
