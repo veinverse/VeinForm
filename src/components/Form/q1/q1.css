@@ -27,10 +27,13 @@ p {
   margin: 1.5rem 0 1rem;
 }
 
-.option {
+label {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 400;
   width: 100%;
   padding: 1rem 3rem;
   cursor: pointer;
@@ -42,24 +45,34 @@ p {
 .option > input:checked + label {
   background-color: var(--color-primary);
   transition: var(--transition);
+  color: var(--color-black);
 }
 
 .option > input {
   display: none;
 }
 
-.option > label {
-  color: white;
+.text_enter {
+  display: block !important;
+  width: 100% !important;
+  padding: 1rem 3rem !important;
+  cursor: pointer !important;
+  border: 2px solid var(--color-primary) !important;
+  border-radius: 12px;
+  background: none;
+  text-align: center !important;
+}
+
+.text_enter::placeholder {
+  color: black;
+  text-align: center;
   font-size: 18px;
+  color: var(--color-white);
   font-weight: 400;
 }
 
-.option > label:checked {
-  color: var(--color-black);
-}
-
-.text_enter {
-  display: block !important;
+.text_enter::placeholder:active {
+  display: none;
 }
 
 .next__btn {

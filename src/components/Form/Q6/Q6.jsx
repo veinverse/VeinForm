@@ -5,7 +5,7 @@ const Q6 = () => {
     <div className="q__wrapper">
       <h1>Question 6</h1>
       <h2>
-        Which issues do you face with your business activities?This question is
+        Which issues do you face with your business activities? This question is
         required.
       </h2>
       <div className="choice__wrapper">
@@ -48,7 +48,7 @@ const Q6 = () => {
         <div className="option">
           <input
             type="text"
-            placeholder="Other"
+            placeholder="Other? Please Type"
             name="business issues"
             className="text_enter"
           />
