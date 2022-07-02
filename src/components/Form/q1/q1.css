@@ -1,75 +1,73 @@
-body,
-.q1__wrapper {
+.q__wrapper {
+  margin: 5rem auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
-.question__text {
-  text-align: center;
+h1 {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.title {
-  color: #f4e6b1;
+h2 {
+  color: var(--color-white);
   font-size: 25px;
-  font-weight: 700;
-}
-
-.question {
-  color: #ffffff;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 60px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .choice__wrapper {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin: 1.5rem 0 1rem;
 }
 
 .option {
-  width: 590px;
-  height: 71px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 3rem;
   cursor: pointer;
-  border: 2px solid #f4e6b1;
+  border: 2px solid var(--color-primary);
   border-radius: 12px;
-  padding: 15px 40px 15px 8px;
   margin-bottom: 8px;
-  text-align: center;
 }
 
-.option__text {
-  color: #fff9c2;
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 45px;
+.option > input:checked + label {
+  background-color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.option > input {
+  display: none;
+}
+
+.option > label {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.option > label:checked {
+  color: var(--color-black);
+}
+
+.text_enter {
+  display: block !important;
 }
 
 .next__btn {
-  width: 188px;
-  height: 68px;
+  padding: 0.9rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1d4d86;
+  background: var(--color-auxiliary);
   border-radius: 16px;
   cursor: pointer;
 }
 .next__btn > p {
   color: #ffffff;
-  font-size: 25px;
-  font-weight: 500;
-  line-height: 38px;
-  text-align: center;
-  background: transparent;
-}
-.next__btn > p > span {
-  left: 5%;
-  right: 43%;
-  top: 80%;
-  bottom: -70%;
-  transform: rotate(-90deg);
-  color: white;
+  font-size: 22px;
 }
