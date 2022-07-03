@@ -1,14 +1,65 @@
 import "./q2.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "just",
+      duration: 1,
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const childVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { type: "just", duration: 1 },
+  },
+};
 
 const Q2 = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+    console.log(inView);
+  }, [inView, controls]);
+
   return (
-    <div className="q__wrapper" id="question2">
+    <motion.div
+      variants={containerVariant}
+      initial="hidden"
+      animate={controls}
+      className="q__wrapper"
+      id="question2"
+    >
       <h1>Question 2</h1>
       <h2>Where do you mostly hold your business activities?</h2>
       <p style={{ color: "white", fontWeight: 600, paddingTop: "10px" }}>
         Select any three (3) regions
       </p>
-      <div className="choice__wrapper grid__container">
+      <motion.div
+        variants={childVariant}
+        className="choice__wrapper grid__container"
+        ref={ref}
+      >
         <div className="option grid__item">
           <input
             type="checkbox"
@@ -113,7 +164,7 @@ const Q2 = () => {
           <input type="checkbox" value="Volta" id="volta" name="location" />
           <label for="volta">Volta</label>
         </div>
-      </div>
+      </motion.div>
       <a href="#question3" className="next__btn">
         <p className="btn__text">
           Next &nbsp;
@@ -132,7 +183,7 @@ const Q2 = () => {
           </span>
         </p>
       </a>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,46 +1,59 @@
 import "./q1.css";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { useAnimation } from "framer-motion";
 
-const variant = {
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+  },
   visible: {
-    x: 0,
+    opacity: 1,
     transition: {
-      type: "aniticipate",
-      duration: 3,
-      bounce: 0.3,
-    },
-    hidden: {
-      x: "-70vw",
-      opacity: 0,
+      type: "just",
+      duration: 1,
+      when: "beforeChildren",
+      staggerChildren: 0.5,
     },
   },
 };
 
-const Q1 = ({ setUsername }) => {
-  const animation = useAnimation();
+const childVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { type: "just", duration: 1 },
+  },
+};
+
+const Q1 = () => {
+  const controls = useAnimation();
   const { ref, inView } = useInView();
 
   useEffect(() => {
     if (inView) {
-      animation.start("visible");
+      controls.start("visible");
     }
-  }, [animation, inView]);
+    if (!inView) {
+      controls.start("hidden");
+    }
+    console.log(inView);
+  }, [inView, controls]);
 
   return (
     <motion.div
       id="question1"
-      animate={animation}
-      ref={ref}
-      initial="hidden"
-      variants={variant}
       className="q__wrapper"
+      variants={containerVariant}
+      initial="hidden"
+      animate={controls}
+      ref={ref}
     >
       <h1>Question 1</h1>
       <h2>What do you do?</h2>
-      <div className="choice__wrapper">
+      <motion.div variants={childVariant} className="choice__wrapper">
         <div className="option">
           <input type="radio" value="Event Planning" id="ep" name="career" />
           <label for="ep">Event Planning</label>
@@ -62,9 +75,9 @@ const Q1 = ({ setUsername }) => {
           <input type="radio" value="Other" id="other" name="career" />
           <label for="other">Other</label>
         </div>
-      </div>
+      </motion.div>
 
-      <a href="#question2" className="next__btn">
+      <motion.a variants={childVariant} href="#question2" className="next__btn">
         Next &nbsp;
         <span>
           <svg
@@ -79,7 +92,7 @@ const Q1 = ({ setUsername }) => {
             />
           </svg>
         </span>
-      </a>
+      </motion.a>
     </motion.div>
   );
 };

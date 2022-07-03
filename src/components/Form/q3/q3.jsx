@@ -1,12 +1,59 @@
 import gadgets from "../../../photos/gadgets.jpg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "just",
+      duration: 1,
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const childVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { type: "just", duration: 1 },
+  },
+};
 
 const Q3 = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+    console.log(inView);
+  }, [inView, controls]);
+
   return (
     <div className="imq__body" id="question3">
       <div className="q__wrapper">
         <h1>Question 3</h1>
         <h2>Which gadget do you use the most for your business activities?</h2>
-        <div className="choice__wrapper">
+        <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          animate={controls}
+          className="choice__wrapper"
+          ref={ref}
+        >
           <div className="option">
             <input type="radio" value="Laptop" id="laptop" name="gadget" />
             <label for="laptop">Laptop</label>
@@ -19,9 +66,9 @@ const Q3 = () => {
             <input type="radio" value="Mobile Phone" id="phone" name="gadget" />
             <label for="phone">Mobile Phone</label>
           </div>
-        </div>
+        </motion.div>
 
-        <a href="#question4" className="next__btn">
+        <motion.a href="#question4" className="next__btn">
           Next &nbsp;
           <span>
             <svg
@@ -36,7 +83,7 @@ const Q3 = () => {
               />
             </svg>
           </span>
-        </a>
+        </motion.a>
       </div>
       <div className="img__wrapper">
         <img src={gadgets} alt="gadgets" />
