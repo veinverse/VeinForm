@@ -21,7 +21,7 @@ const Q3 = () => {
           </div>
         </div>
 
-        <button className="next__btn">
+        <a href="#question4" className="next__btn">
           Next &nbsp;
           <span>
             <svg
@@ -36,7 +36,7 @@ const Q3 = () => {
               />
             </svg>
           </span>
-        </button>
+        </a>
       </div>
       <div className="img__wrapper">
         <img src={gadgets} alt="gadgets" />

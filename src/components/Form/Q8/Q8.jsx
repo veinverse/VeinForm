@@ -67,7 +67,7 @@ const Q8 = () => {
           </label>
         </div>
       </div>
-      <button className="next__btn">
+      <a href="#question9" n className="next__btn">
         <p className="btn__text">
           Next &nbsp;
           <span>
@@ -84,7 +84,7 @@ const Q8 = () => {
             </svg>
           </span>
         </p>
-      </button>
+      </a>
     </div>
   );
 };

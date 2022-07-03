@@ -24,7 +24,7 @@ const Q9 = () => {
           <label for="no">No</label>
         </div>
       </div>
-      <button className="next__btn">
+      <a href="#question10" className="next__btn">
         <p className="btn__text">
           Next &nbsp;
           <span>
@@ -41,7 +41,7 @@ const Q9 = () => {
             </svg>
           </span>
         </p>
-      </button>
+      </a>
     </div>
   );
 };

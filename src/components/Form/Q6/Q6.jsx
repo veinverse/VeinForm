@@ -1,11 +1,6 @@
 const Q6 = () => {
   return (
-    <div
-      className="q__wrapper
-    
-    "
-      id="question6"
-    >
+    <div className="q__wrapper" id="question6">
       <h1>Question 6</h1>
       <h2>
         Which issues do you face with your business activities? This question is
@@ -17,7 +12,6 @@ const Q6 = () => {
             type="checkbox"
             value="Challenges in receiving online payments"
             id="challenge1"
-            name="business issues"
           />
           <label for="challenge1">
             Challenges in receiving online payments
@@ -28,7 +22,6 @@ const Q6 = () => {
             type="checkbox"
             value="Delay in receiving payments from clients"
             id="challenge2"
-            name="business issues"
           />
           <label for="challenge2">
             Delay in receiving payments from clients
@@ -39,7 +32,6 @@ const Q6 = () => {
             type="checkbox"
             value="Advertisement of my business"
             id="challenge3"
-            name="business issues"
           />
           <label for="challenge3">Advertisement of my business</label>
         </div>
@@ -48,7 +40,6 @@ const Q6 = () => {
             type="checkbox"
             value="Difficulty in communicating with clients"
             id="challenge4"
-            name="business issues"
           />
           <label for="challenge4">
             Difficulty in communicating with client
@@ -58,13 +49,12 @@ const Q6 = () => {
           <input
             type="text"
             placeholder="Other? Please Type"
-            name="business issues"
             className="text_enter"
           />
         </div>
       </div>
       <a href="#question2">
-        <button className="next__btn">
+        <a href="#question7" className="next__btn">
           <p className="btn__text">
             Next &nbsp;
             <span>
@@ -81,7 +71,7 @@ const Q6 = () => {
               </svg>
             </span>
           </p>
-        </button>
+        </a>
       </a>
     </div>
   );

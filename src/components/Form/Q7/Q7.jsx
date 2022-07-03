@@ -2,7 +2,7 @@ import "./q7.css";
 
 const q7 = () => {
   return (
-    <div className="q__wrapper">
+    <div className="q__wrapper" id="question7">
       <h1>Question 7</h1>
       <h2>
         How well are you able to interact with a website?This question is
@@ -70,7 +70,7 @@ const q7 = () => {
           </label>
         </div>
       </div>
-      <button className="next__btn">
+      <a href="#question8" className="next__btn">
         <p className="btn__text">
           Next &nbsp;
           <span>
@@ -87,7 +87,7 @@ const q7 = () => {
             </svg>
           </span>
         </p>
-      </button>
+      </a>
     </div>
   );
 };

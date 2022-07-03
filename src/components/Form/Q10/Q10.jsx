@@ -1,4 +1,7 @@
 const q10 = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="q__wrapper" id="question10">
       <h1>Question 10</h1>
@@ -25,7 +28,7 @@ const q10 = () => {
           <label for="no2">No</label>
         </div>
       </div>
-      <button className="next__btn">
+      <button className="next__btn" onClick={handleSubmit}>
         <p className="btn__text">Submit</p>
       </button>
     </div>

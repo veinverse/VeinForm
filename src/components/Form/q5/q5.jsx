@@ -38,7 +38,7 @@ const Q5 = () => {
           </div>
         </div>
 
-        <button className="next__btn">
+        <a href="#question6" className="next__btn">
           Next &nbsp;
           <span>
             <svg
@@ -53,7 +53,7 @@ const Q5 = () => {
               />
             </svg>
           </span>
-        </button>
+        </a>
       </div>
       <div className="img__wrapper">
         <img src={interact} alt="interact" />

@@ -64,7 +64,7 @@ const Q1 = ({ setUsername }) => {
         </div>
       </div>
 
-      <button className="next__btn">
+      <a href="#question2" className="next__btn">
         Next &nbsp;
         <span>
           <svg
@@ -79,7 +79,7 @@ const Q1 = ({ setUsername }) => {
             />
           </svg>
         </span>
-      </button>
+      </a>
     </motion.div>
   );
 };
