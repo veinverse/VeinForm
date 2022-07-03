@@ -2,7 +2,7 @@ import React from "react";
 
 const Q8 = () => {
   return (
-    <div className="q__wrapper">
+    <div className="q__wrapper" id="question8">
       <h1>Question 8</h1>
       <h2>How well are you able to interact with a mobile app?</h2>
       <div className="choice__wrapper flex-row">

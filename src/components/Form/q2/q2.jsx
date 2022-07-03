@@ -2,10 +2,12 @@ import "./q2.css";
 
 const Q2 = () => {
   return (
-    <div className="q__wrapper">
+    <div className="q__wrapper" id="question2">
       <h1>Question 2</h1>
       <h2>Where do you mostly hold your business activities?</h2>
-      <p>Select any three (3) regions</p>
+      <p style={{ color: "white", fontWeight: 600, paddingTop: "10px" }}>
+        Select any three (3) regions
+      </p>
       <div className="choice__wrapper grid__container">
         <div className="option grid__item">
           <input

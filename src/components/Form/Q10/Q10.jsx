@@ -1,6 +1,6 @@
 const q10 = () => {
   return (
-    <div className="q__wrapper">
+    <div className="q__wrapper" id="question10">
       <h1>Question 10</h1>
       <h2>
         Will you be willing to use a website or mobile app to help your business

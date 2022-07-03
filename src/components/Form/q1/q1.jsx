@@ -19,7 +19,7 @@ const variant = {
   },
 };
 
-const Q1 = () => {
+const Q1 = ({ setUsername }) => {
   const animation = useAnimation();
   const { ref, inView } = useInView();
 
@@ -31,6 +31,7 @@ const Q1 = () => {
 
   return (
     <motion.div
+      id="question1"
       animate={animation}
       ref={ref}
       initial="hidden"
@@ -62,6 +63,7 @@ const Q1 = () => {
           <label for="other">Other</label>
         </div>
       </div>
+
       <button className="next__btn">
         Next &nbsp;
         <span>
