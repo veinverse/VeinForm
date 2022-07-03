@@ -4,6 +4,9 @@ import "./q4.css";
 const Q4 = () => {
   return (
     <div className="imq__body" id="question4">
+      <div className="img__wrapper">
+        <img src={payment} alt="payment" />
+      </div>
       <div className="q__wrapper">
         <h1>Question 4</h1>
         <h2>How do you receive payments from your clients?</h2>
@@ -53,9 +56,6 @@ const Q4 = () => {
             </svg>
           </span>
         </a>
-      </div>
-      <div className="img__wrapper">
-        <img src={payment} alt="payment" />
       </div>
     </div>
   );
