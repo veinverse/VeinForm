@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 830px) {
   .option__numbers {
-    padding: 0.1rem 0.7rem !important;
+    padding: 0.07rem 0.5rem !important;
     border-radius: 8px !important;
   }
 }

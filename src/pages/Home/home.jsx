@@ -30,7 +30,7 @@ const Home = () => {
         <div className="main__text-sub">
           <h3>
             This is a little survey for the commencement of a software
-            engineering project to make life easier and better
+            engineering project to facilitate your business operations
           </h3>
           <h4>All rights Reseved | Veinverse Inc.</h4>
         </div>

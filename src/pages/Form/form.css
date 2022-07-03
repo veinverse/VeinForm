@@ -30,3 +30,9 @@ a > p {
 a > .scroll-top > svg {
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 830px) {
+  .fixed {
+    right: 27%;
+  }
+}

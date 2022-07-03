@@ -13,7 +13,7 @@ const containerVariant = {
       type: "just",
       duration: 1,
       when: "beforeChildren",
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
 };

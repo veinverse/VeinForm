@@ -115,6 +115,10 @@ label {
 }
 
 @media screen and (max-width: 830px) {
+  .q__wrapper {
+    width: 95%;
+    margin: 0 auto;
+  }
   .imq__body {
     flex-direction: column;
     height: 100vh;
@@ -125,8 +129,15 @@ label {
     height: 30vh;
   }
 
+  .choice__wrapper {
+  }
+
   h2 {
     font-size: 18px;
     width: 90%;
+  }
+
+  label {
+    padding: 0.8rem 0.6rem;
   }
 }
