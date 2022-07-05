@@ -65,16 +65,16 @@ const Q2 = () => {
             type="checkbox"
             value="Event Planning"
             id="accra"
-            name="location"
+            name="Event Planning"
           />
           <label for="accra">Greater Accra</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Eastern" id="eastern" name="location" />
+          <input type="checkbox" value="Eastern" id="eastern" name="Location" />
           <label for="eastern">Eastern</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Central" id="central" name="location" />
+          <input type="checkbox" value="Central" id="central" name="Location" />
           <label for="central">Central</label>
         </div>
         <div className="option grid__item">
@@ -82,7 +82,7 @@ const Q2 = () => {
             type="checkbox"
             value="North East"
             id="northEast"
-            name="location"
+            name="Location"
           />
           <label for="northEast">North East</label>
         </div>
@@ -91,20 +91,20 @@ const Q2 = () => {
             type="checkbox"
             value="Northern"
             id="northern"
-            name="location"
+            name="Location"
           />
           <label for="northern">Northern</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Ahafo" id="ahafo" name="location" />
+          <input type="checkbox" value="Ahafo" id="ahafo" name="Location" />
           <label for="ahafo">Ahafo</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Ashanti" id="ashanti" name="location" />
+          <input type="checkbox" value="Ashanti" id="ashanti" name="Location" />
           <label for="ashanti">Ashanti</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Bono East" id="bono" name="location" />
+          <input type="checkbox" value="Bono East" id="bono" name="Location" />
           <label for="bono">Bono East</label>
         </div>
         <div className="option grid__item">
@@ -112,7 +112,7 @@ const Q2 = () => {
             type="checkbox"
             value="Brong Ahafo"
             id="brongAhafo"
-            name="location"
+            name="Location"
           />
           <label for="brongAhafo">Brong Ahafo</label>
         </div>
@@ -125,7 +125,7 @@ const Q2 = () => {
             type="checkbox"
             value="Savannah"
             id="savannah"
-            name="location"
+            name="Location"
           />
           <label for="savannah">Savannah</label>
         </div>
@@ -134,7 +134,7 @@ const Q2 = () => {
             type="checkbox"
             value="Upper East"
             id="upperEast"
-            name="location"
+            name="Location"
           />
           <label for="upperEast">Upper East</label>
         </div>
@@ -156,12 +156,12 @@ const Q2 = () => {
             type="checkbox"
             value="Western North"
             id="westernNorth"
-            name="location"
+            name="Location"
           />
           <label for="westernNorth">Western North</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Volta" id="volta" name="location" />
+          <input type="checkbox" value="Volta" id="volta" name="Location" />
           <label for="volta">Volta</label>
         </div>
       </motion.div>
