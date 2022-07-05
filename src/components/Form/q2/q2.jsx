@@ -143,7 +143,7 @@ const Q2 = () => {
             type="checkbox"
             value="Upper West"
             id="upperWest"
-            name="location"
+            name="Location"
           />
           <label for="upperWest">Upper West</label>
         </div>
