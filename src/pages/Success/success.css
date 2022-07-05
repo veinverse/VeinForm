@@ -1,0 +1,16 @@
+.success__wrapper, .success__text {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.success__icon {
+    height: 500px;
+}
+
+.success__text > h2 {
+    width: 100% !important;
+    color: #1d4d86;
+}
