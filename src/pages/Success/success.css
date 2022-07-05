@@ -1,9 +1,11 @@
-.success__wrapper, .success__text {
-    height: 80vh;
+body {
+    height: 100vh;
+}
+
+body, .success__wrapper, .success__text {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
 .success__icon {
