@@ -33,6 +33,9 @@ a > .scroll-top > svg {
 
 @media screen and (max-width: 500px) {
   .fixed {
-    right: 23%;
+  }
+
+  .fixed > p {
+    display: none;
   }
 }
