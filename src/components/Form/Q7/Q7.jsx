@@ -10,7 +10,7 @@ const q7 = ({setState7}) => {
     <div className="q__wrapper" id="question7">
       <h1>Question 7</h1>
       <h2>
-        How well are you able to interact with a website?This question is
+        How well are you able to interact with a website? This question is
         required.
       </h2>
       <div className="choice__wrapper flex-row">
