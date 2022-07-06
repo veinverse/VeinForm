@@ -27,9 +27,9 @@ const Form = () => {
 
   let navigate = useNavigate();
 
-  const form = async (e)=>{
+  const form = async ()=>{
     const response = {state1, state2, state3, state4, state5, state6, state7,state8,state9,state10}
-    await fetch('/answers', {
+    await fetch('https://dry-savannah-94364.herokuapp.com/answers', {
       method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(response),
