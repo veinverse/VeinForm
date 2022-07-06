@@ -28,7 +28,20 @@ const childVariant = {
   },
 };
 
-const Q2 = () => {
+const Q2 = (props) => {
+
+  const click = (e)=>{
+    const {checked,value}= e.target   
+        if(checked===true){
+         localStorage.setItem(`${value}`, value)}
+      props.setState2([localStorage])  
+        if(checked===false){
+          localStorage.removeItem(`${value}`)
+        }
+      }
+
+      
+
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -39,7 +52,6 @@ const Q2 = () => {
     if (!inView) {
       controls.start("hidden");
     }
-    console.log(inView);
   }, [inView, controls]);
 
   return (
@@ -63,18 +75,24 @@ const Q2 = () => {
         <div className="option grid__item">
           <input
             type="checkbox"
-            value="Event Planning"
+            value="Greater Accra"
             id="accra"
-            name="Event Planning"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click} 
           />
           <label for="accra">Greater Accra</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Eastern" id="eastern" name="Location" />
+          <input type="checkbox" value="Eastern" id="eastern" name="Where do you mostly hold your business activities?"    
+          onChange={click}    
+          />
           <label for="eastern">Eastern</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Central" id="central" name="Location" />
+          <input type="checkbox" value="Central" id="central" name="Where do you mostly hold your business activities?"    
+          onChange={click}     
+  
+          />
           <label for="central">Central</label>
         </div>
         <div className="option grid__item">
@@ -82,7 +100,8 @@ const Q2 = () => {
             type="checkbox"
             value="North East"
             id="northEast"
-            name="Location"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click}    
           />
           <label for="northEast">North East</label>
         </div>
@@ -91,20 +110,24 @@ const Q2 = () => {
             type="checkbox"
             value="Northern"
             id="northern"
-            name="Location"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click}    
           />
           <label for="northern">Northern</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Ahafo" id="ahafo" name="Location" />
+          <input type="checkbox" value="Ahafo" id="ahafo" name="Where do you mostly hold your business activities?"    
+          onChange={click}     />
           <label for="ahafo">Ahafo</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Ashanti" id="ashanti" name="Location" />
+          <input type="checkbox" value="Ashanti" id="ashanti" name="Where do you mostly hold your business activities?"    
+          onChange={click}     />
           <label for="ashanti">Ashanti</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Bono East" id="bono" name="Location" />
+          <input type="checkbox" value="Bono East" id="bono" name="Where do you mostly hold your business activities?"    
+          onChange={click}     />
           <label for="bono">Bono East</label>
         </div>
         <div className="option grid__item">
@@ -112,12 +135,14 @@ const Q2 = () => {
             type="checkbox"
             value="Brong Ahafo"
             id="brongAhafo"
-            name="Location"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click}    
           />
           <label for="brongAhafo">Brong Ahafo</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Oti" id="oti" name="location" />
+          <input type="checkbox" value="Oti" id="oti" name="Where do you mostly hold your business activities?"    
+          onChange={click}     />
           <label for="oti">Oti</label>
         </div>
         <div className="option grid__item">
@@ -125,7 +150,8 @@ const Q2 = () => {
             type="checkbox"
             value="Savannah"
             id="savannah"
-            name="Location"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click}    
           />
           <label for="savannah">Savannah</label>
         </div>
@@ -134,7 +160,8 @@ const Q2 = () => {
             type="checkbox"
             value="Upper East"
             id="upperEast"
-            name="Location"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click}    
           />
           <label for="upperEast">Upper East</label>
         </div>
@@ -143,12 +170,14 @@ const Q2 = () => {
             type="checkbox"
             value="Upper West"
             id="upperWest"
-            name="Location"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click}    
           />
           <label for="upperWest">Upper West</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Western" id="western" name="location" />
+          <input type="checkbox" value="Western" id="western" name="Where do you mostly hold your business activities?"    
+          onChange={click}     />
           <label for="western">Western</label>
         </div>
         <div className="option grid__item">
@@ -156,12 +185,14 @@ const Q2 = () => {
             type="checkbox"
             value="Western North"
             id="westernNorth"
-            name="Location"
+            name="Where do you mostly hold your business activities?"    
+          onChange={click}    
           />
           <label for="westernNorth">Western North</label>
         </div>
         <div className="option grid__item">
-          <input type="checkbox" value="Volta" id="volta" name="Location" />
+          <input type="checkbox" value="Volta" id="volta" name="Where do you mostly hold your business activities?"    
+          onChange={click}     />
           <label for="volta">Volta</label>
         </div>
       </motion.div>

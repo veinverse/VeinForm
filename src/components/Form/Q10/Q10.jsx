@@ -1,7 +1,11 @@
-const q10 = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+const q10 = (props) => {
+  const handleChange = e => {
+    const {value } = e.target;
+  
+    props.setState10( value);
+  }
+
+ 
   return (
     <div className="q__wrapper" id="question10">
       <h1>Question 10</h1>
@@ -11,26 +15,29 @@ const q10 = () => {
       </h2>
       <div className="choice__wrapper">
         <div className="option">
-          <input type="radio" value="Event Planning" id="yes2" name="willing" />
+          <input type="radio" value="Yes" id="yes2" name="Will you be willing to use a website or mobile app to help your business
+        activities (for free)?" onChange={handleChange}  />
           <label for="yes2">Yes</label>
         </div>
         <div className="option">
-          <input type="radio" value="Own a Studio" id="maybe2" name="willing" />
+          <input type="radio" value="Maybe" id="maybe2" name="Will you be willing to use a website or mobile app to help your business
+        activities (for free)?" onChange={handleChange}  />
           <label for="maybe2">Not really</label>
         </div>
         <div className="option">
           <input
             type="radio"
-            value="Manage a Restaurant"
+            value="No"
             id="no2"
-            name="willing"
+            name="Will you be willing to use a website or mobile app to help your business
+        activities (for free)?" onChange={handleChange} 
           />
           <label for="no2">No</label>
         </div>
       </div>
-      <button className="next__btn" onClick={handleSubmit}>
+      <a href={handleChange} className="next__btn" onClick={props.form}>
         <p className="btn__text">Submit</p>
-      </button>
+      </a>
     </div>
   );
 };

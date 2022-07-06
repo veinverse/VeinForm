@@ -111,6 +111,7 @@ label {
 
 .imq__body {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -141,3 +142,5 @@ label {
     padding: 0.8rem 0.6rem;
   }
 }
+
+

@@ -1,67 +1,72 @@
 import React from "react";
 
-const Q8 = () => {
+const Q8 = ({setState8}) => {
+  const handleChange = e => {
+    const {value } = e.target;
+  
+    setState8(value);
+  }
   return (
     <div className="q__wrapper" id="question8">
       <h1>Question 8</h1>
       <h2>How well are you able to interact with a mobile app?</h2>
       <div className="choice__wrapper flex-row">
         <div className="option">
-          <input type="radio" value="1" id="n8-1" name="numbers" />
+          <input type="radio" value="1" id="n8-1" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-1">
             1
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="2" id="n8-2" name="numbers" />
+          <input type="radio" value="2" id="n8-2" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-2">
             2
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="3" id="n8-3" name="numbers" />
+          <input type="radio" value="3" id="n8-3" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-3">
             3
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="4" id="n8-4" name="numbers" />
+          <input type="radio" value="4" id="n8-4" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-4">
             4
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="5" id="n8-5" name="numbers" />
+          <input type="radio" value="5" id="n8-5" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-5">
             5
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="6" id="n8-6" name="numbers" />
+          <input type="radio" value="6" id="n8-6" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-6">
             6
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="7" id="n8-7" name="numbers" />
+          <input type="radio" value="7" id="n8-7" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-7">
             7
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="8" id="n8-8" name="numbers" />
+          <input type="radio" value="8" id="n8-8" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-8">
             8
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="9" id="n8-9" name="numbers" />
+          <input type="radio" value="9" id="n8-9" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-9">
             9
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="10" id="n8-10" name="numbers" />
+          <input type="radio" value="10" id="n8-10" name="How well are you able to interact with a mobile app?" onChange={handleChange} />
           <label className="option__numbers" for="n8-10">
             10
           </label>
