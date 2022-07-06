@@ -28,7 +28,12 @@ const childVariant = {
   },
 };
 
-const Q1 = () => {
+const Q1 = ({setState1}) => {
+  const handleChange = e => {
+    const { value } = e.target;
+
+    setState1(value);
+  }
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -39,7 +44,6 @@ const Q1 = () => {
     if (!inView) {
       controls.start("hidden");
     }
-    console.log(inView);
   }, [inView, controls]);
 
   return (
@@ -54,12 +58,13 @@ const Q1 = () => {
       <h1>Question 1</h1>
       <h2>What do you do?</h2>
       <motion.div variants={childVariant} className="choice__wrapper">
+      
         <div className="option">
-          <input type="radio" value="Event Planning" id="ep" name="career" />
+          <input type="radio" value="Event Planning" id="ep" name="What do you do?" onChange={handleChange}  />
           <label for="ep">Event Planning</label>
         </div>
         <div className="option">
-          <input type="radio" value="Own a Studio" id="studio" name="career" />
+          <input type="radio" value="Own a Studio" id="studio" name="What do you do?"onChange={handleChange}  />
           <label for="studio">Own a Studio</label>
         </div>
         <div className="option">
@@ -67,12 +72,12 @@ const Q1 = () => {
             type="radio"
             value="Manage a Restaurant"
             id="restaurant"
-            name="career"
+            name="What do you do?" onChange={handleChange} 
           />
           <label for="restaurant">Manage a Restaurant</label>
         </div>
         <div className="option">
-          <input type="radio" value="Other" id="other" name="career" />
+          <input type="radio" value="Other" id="other" name="What do you do?" onChange={handleChange}  />
           <label for="other">Other</label>
         </div>
       </motion.div>

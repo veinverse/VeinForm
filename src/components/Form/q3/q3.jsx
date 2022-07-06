@@ -28,7 +28,14 @@ const childVariant = {
   },
 };
 
-const Q3 = () => {
+const Q3 = ({setState3}) => {
+
+  const handleChange = e => {
+    const {value } = e.target;
+  
+    setState3(value);
+  }
+
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -39,7 +46,6 @@ const Q3 = () => {
     if (!inView) {
       controls.start("hidden");
     }
-    console.log(inView);
   }, [inView, controls]);
 
   return (
@@ -54,18 +60,18 @@ const Q3 = () => {
           className="choice__wrapper"
           ref={ref}
         >
-          <div className="option">
-            <input type="radio" value="Laptop" id="laptop" name="gadget" />
-            <label for="laptop">Laptop</label>
-          </div>
-          <div className="option">
-            <input type="radio" value="Tablet" id="tablet" name="gadget" />
-            <label for="tablet">Tablet</label>
-          </div>
-          <div className="option">
-            <input type="radio" value="Mobile Phone" id="phone" name="gadget" />
-            <label for="phone">Mobile Phone</label>
-          </div>
+            <div className="option">
+                        <input type="radio" value="Laptop" id="laptop" name="Which gadget do you use the most for your business activities?"  onChange={handleChange}/>
+                        <label for="laptop">Laptop</label>
+                    </div>
+                    <div className="option">
+                        <input type="radio" value="Tablet" id="tablet" name="Which gadget do you use the most for your business activities?"  onChange={handleChange}/>
+                        <label for="tablet">Tablet</label>
+                    </div>
+                    <div className="option">
+                        <input type="radio" value="Mobile Phone" id="phone" name="Which gadget do you use the most for your business activities?"  onChange={handleChange}/>
+                        <label for="phone">Mobile Phone</label>
+                    </div>
         </motion.div>
 
         <motion.a href="#question4" className="next__btn">

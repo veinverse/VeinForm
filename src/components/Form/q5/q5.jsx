@@ -1,6 +1,11 @@
 import interact from "../../../photos/interact.png";
 
-const Q5 = () => {
+const Q5 = ({setState5}) => {
+  const handleChange = e => {
+    const {value } = e.target;
+  
+    setState5(value);
+  }
   return (
     <div className="imq__body" id="question5">
       <div className="q__wrapper">
@@ -8,35 +13,28 @@ const Q5 = () => {
         <h2>With which medium do you mostly interact with your clients?</h2>
 
         <div className="choice__wrapper">
-          <div className="option">
-            <input
-              type="radio"
-              value="Social Media (Facebook, WhatsApp, etc.)"
-              id="social media"
-              name="medium"
-            />
-            <label for="social media">
-              Social Media (Facebook, WhatsApp, etc.)
-            </label>
-          </div>
-          <div className="option">
-            <input type="radio" value="E-mail" id="email" name="medium" />
-            <label for="email">E-mail</label>
-          </div>
-          <div className="option">
-            <input type="radio" value="Phone calls" id="calls" name="medium" />
-            <label for="calls">Phone calls</label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              value="Meet In-Person"
-              id="meet"
-              name="medium"
-            />
-            <label for="meet">Meet In-Person</label>
-          </div>
-        </div>
+                    <div className="option">
+                        <input type="radio" value="Social Media (Facebook, WhatsApp, etc.)" id="social media" name="With which medium do you mostly interact with your clients?" onChange={handleChange}/>
+                        <label for="social media">Social Media (Facebook, WhatsApp, etc.)</label>
+                    </div>
+                    <div className="option">
+                        <input type="radio" value="E-mail" id="email" name="With which medium do you mostly interact with your clients?" onChange={handleChange}/>
+                        <label for="email">E-mail</label>
+                    </div>
+                    <div className="option">
+                        <input
+                            type="radio"
+                            value="Phone calls"
+                            id="calls"
+                            name="With which medium do you mostly interact with your clients?" onChange={handleChange}
+                        />
+                        <label for="calls">Phone calls</label>
+                    </div>
+                    <div className="option">
+                        <input type="radio" value="Meet In-Person" id="meet" name="With which medium do you mostly interact with your clients?" onChange={handleChange}/>
+                        <label for="meet">Meet In-Person</label>
+                    </div>
+                </div>
 
         <a href="#question6" className="next__btn">
           Next &nbsp;

@@ -3,10 +3,3 @@
   gap: 0 15px;
   grid-template-columns: auto auto auto;
 }
-
-@media screen and (max-width: 830px) {
-  .grid__container {
-    grid-template-columns: auto auto;
-    justify-content: center;
-  }
-}

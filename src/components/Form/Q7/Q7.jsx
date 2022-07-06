@@ -1,6 +1,11 @@
 import "./q7.css";
 
-const q7 = () => {
+const q7 = ({setState7}) => {
+  const handleChange = e => {
+    const {  value } = e.target;
+  
+    setState7(value);
+  }
   return (
     <div className="q__wrapper" id="question7">
       <h1>Question 7</h1>
@@ -10,61 +15,61 @@ const q7 = () => {
       </h2>
       <div className="choice__wrapper flex-row">
         <div className="option">
-          <input type="radio" value="1" id="n1" name="numbers" />
+          <input type="radio" value="1" id="n1" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n1">
             1
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="2" id="n2" name="numbers" />
+          <input type="radio" value="2" id="n2" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n2">
             2
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="3" id="n3" name="numbers" />
+          <input type="radio" value="3" id="n3" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n3">
             3
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="4" id="n4" name="numbers" />
+          <input type="radio" value="4" id="n4" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n4">
             4
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="5" id="n5" name="numbers" />
+          <input type="radio" value="5" id="n5" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n5">
             5
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="6" id="n6" name="numbers" />
+          <input type="radio" value="6" id="n6" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n6">
             6
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="7" id="n7" name="numbers" />
+          <input type="radio" value="7" id="n7" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n7">
             7
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="8" id="n8" name="numbers" />
+          <input type="radio" value="8" id="n8" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n8">
             8
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="9" id="n9" name="numbers" />
+          <input type="radio" value="9" id="n9" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n9">
             9
           </label>
         </div>
         <div className="option">
-          <input type="radio" value="10" id="n10" name="numbers" />
+          <input type="radio" value="10" id="n10" name="How well are you able to interact with a website?" onChange={handleChange} />
           <label className="option__numbers" for="n10">
             10
           </label>

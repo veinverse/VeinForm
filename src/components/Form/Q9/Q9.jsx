@@ -1,4 +1,9 @@
-const Q9 = () => {
+const Q9 = ({setState9}) => {
+  const handleChange = e => {
+    const {value } = e.target;
+  
+    setState9(value);
+  }
   return (
     <div className="q__wrapper" id="question9">
       <h1>Question 9</h1>
@@ -7,23 +12,24 @@ const Q9 = () => {
       </h2>
       <div className="choice__wrapper">
         <div className="option">
-          <input type="radio" value="Event Planning" id="yes" name="useapp" />
+          <input type="radio" value="Yes" id="yes" name="Have you used a website or mobile app to help your business activities?" onChange={handleChange} />
           <label for="yes">Yes</label>
         </div>
         <div className="option">
-          <input type="radio" value="Own a Studio" id="maybe" name="useapp" />
+          <input type="radio" value="Maybe" id="maybe" name="Have you used a website or mobile app to help your business activities?" onChange={handleChange} />
           <label for="maybe">Not really</label>
         </div>
         <div className="option">
           <input
             type="radio"
-            value="Manage a Restaurant"
+            value="No"
             id="no"
-            name="useapp"
+            name="Have you used a website or mobile app to help your business activities?" onChange={handleChange}
           />
           <label for="no">No</label>
         </div>
       </div>
+
       <a href="#question10" className="next__btn">
         <p className="btn__text">
           Next &nbsp;

@@ -1,7 +1,37 @@
 import payment from "../../../photos/payment.jpg";
 import "./q4.css";
 
-const Q4 = () => {
+const Q4 = ({setState4}) => {
+  let data = []
+  const click = (e)=>{
+    const {checked}= e.target
+        if(checked===true){
+          if(document.getElementById('MoMo').checked===true){
+            data.push(document.getElementById('MoMo').value)
+          }
+          if(document.getElementById('bank').checked===true){
+            data.push(document.getElementById('bank').value)
+          }
+          if(document.getElementById('cash').checked===true){
+            data.push(document.getElementById('cash').value)
+          }
+          setState4(data)
+        }
+        if(checked===false){
+          if(document.getElementById('MoMo').checked===true){
+            data.push(document.getElementById('MoMo').value)
+          }
+          if(document.getElementById('bank').checked===true){
+            data.push(document.getElementById('bank').value)
+          }
+          if(document.getElementById('cash').checked===true){
+            data.push(document.getElementById('cash').value)
+          }
+          setState4(data)
+        }
+    }
+    
+   
   return (
     <div className="imq__body" id="question4">
       <div className="img__wrapper">
@@ -11,34 +41,19 @@ const Q4 = () => {
         <h1>Question 4</h1>
         <h2>How do you receive payments from your clients?</h2>
         <div className="choice__wrapper">
-          <div className="option">
-            <input
-              type="checkbox"
-              value="Mobile Money (MoMo)"
-              id="MoMo"
-              name="payment"
-            />
-            <label for="MoMo">Mobile Money (MoMo)</label>
-          </div>
-          <div className="option">
-            <input
-              type="checkbox"
-              value="Bank Account"
-              id="bank"
-              name="payment"
-            />
-            <label for="bank">Bank Account</label>
-          </div>
-          <div className="option">
-            <input
-              type="checkbox"
-              value="Physical Cash"
-              id="cash"
-              name="payment"
-            />
-            <label for="cash">Physical Cash</label>
-          </div>
-        </div>
+                    <div className="option">
+                        <input type="checkbox" value="Mobile Money (MoMo)" id="MoMo" name="How do you receive payments from your clients?" onChange={click}/>
+                        <label for="MoMo">Mobile Money (MoMo)</label>
+                    </div>
+                    <div className="option">
+                        <input type="checkbox" value="Bank Account" id="bank" name="How do you receive payments from your clients?" onChange={click}/>
+                        <label for="bank">Bank Account</label>
+                    </div>
+                    <div className="option">
+                        <input type="checkbox" value="Physical Cash" id="cash" name="How do you receive payments from your clients?" onChange={click}/>
+                        <label for="cash">Physical Cash</label>
+                    </div>
+                </div>
 
         <a href="#question5" className="next__btn">
           Next &nbsp;
