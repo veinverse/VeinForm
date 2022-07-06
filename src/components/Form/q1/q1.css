@@ -1,5 +1,5 @@
 .q__wrapper {
-  margin: auto 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,8 +116,6 @@ label {
 
 @media screen and (max-width: 830px) {
   .q__wrapper {
-    width: 95%;
-    margin: 0 auto;
   }
   .imq__body {
     flex-direction: column;
@@ -130,6 +128,8 @@ label {
   }
 
   .choice__wrapper {
+    width: 70%;
+    text-align: center;
   }
 
   h2 {

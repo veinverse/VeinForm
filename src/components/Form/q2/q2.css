@@ -9,4 +9,7 @@
     grid-template-columns: auto auto;
     justify-content: center;
   }
+  .grid__item > label {
+    font-size: 12px !important;
+  }
 }
