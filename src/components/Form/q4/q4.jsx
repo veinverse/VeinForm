@@ -1,60 +1,93 @@
-import payment from "../../../photos/payment.jpg";
+import spaceType from "../../../photos/spaceType.jpg";
 import "./q4.css";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
-const Q4 = ({setState4}) => {
-  let data = []
-  const click = (e)=>{
-    const {checked}= e.target
-        if(checked===true){
-          if(document.getElementById('MoMo').checked===true){
-            data.push(document.getElementById('MoMo').value)
-          }
-          if(document.getElementById('bank').checked===true){
-            data.push(document.getElementById('bank').value)
-          }
-          if(document.getElementById('cash').checked===true){
-            data.push(document.getElementById('cash').value)
-          }
-          setState4(data)
-        }
-        if(checked===false){
-          if(document.getElementById('MoMo').checked===true){
-            data.push(document.getElementById('MoMo').value)
-          }
-          if(document.getElementById('bank').checked===true){
-            data.push(document.getElementById('bank').value)
-          }
-          if(document.getElementById('cash').checked===true){
-            data.push(document.getElementById('cash').value)
-          }
-          setState4(data)
-        }
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "just",
+      duration: 1,
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const childVariant = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: { type: "just", duration: 1 },
+  },
+};
+
+const Q4 = ({setState4}) => { 
+  const handleChange = e => {
+    const { value } = e.target;
+
+    setState4(value);
+  }
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
     }
-    
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [inView, controls]); 
    
   return (
     <div className="imq__body" id="question4">
       <div className="img__wrapper">
-        <img src={payment} alt="payment" />
+        <img src={spaceType} alt="spaceType" />
       </div>
       <div className="q__wrapper">
         <h1>Question 4</h1>
-        <h2>How do you receive payments from your clients?</h2>
-        <div className="choice__wrapper">
-                    <div className="option">
-                        <input type="checkbox" value="Mobile Money (MoMo)" id="MoMo" name="How do you receive payments from your clients?" onChange={click}/>
-                        <label for="MoMo">Mobile Money (MoMo)</label>
-                    </div>
-                    <div className="option">
-                        <input type="checkbox" value="Bank Account" id="bank" name="How do you receive payments from your clients?" onChange={click}/>
-                        <label for="bank">Bank Account</label>
-                    </div>
-                    <div className="option">
-                        <input type="checkbox" value="Physical Cash" id="cash" name="How do you receive payments from your clients?" onChange={click}/>
-                        <label for="cash">Physical Cash</label>
-                    </div>
-                </div>
-
+        <h2>What kind of space do you have?</h2>
+        <motion.div variants={childVariant} className="choice__wrapper">
+          <div className="option">
+            <input type="radio" value="Event Centre" id="event-centre" name="What kind of space do you have?" onChange={handleChange}  />
+            <label for="event-centre">Event Centre</label>
+          </div>
+          <div className="option">
+            <input type="radio" value="Photo Studio" id="photo-studio" name="What kind of space do you have?"onChange={handleChange}  />
+            <label for="photo-studio">Photo Studio</label>
+          </div>
+          <div className="option">
+            <input
+              type="radio"
+              value="Astro Turf Pitch"
+              id="astro-turf"
+              name="What kind of space do you have?" onChange={handleChange} 
+            />
+            <label for="astro-turf">Astro Turf Pitch</label>
+          </div>
+          <div className="option">
+            <input type="radio" value="Art Gallery" id="art-gallery" name="What kind of space do you have?"onChange={handleChange}  />
+            <label for="art-gallery">Art Gallery</label>
+          </div>
+          <div className="option">
+            <input
+              type="text"
+              placeholder="Other? Type here.."
+              name="other"
+              className="text_enter"
+              onChange={(e)=>setState4(e.target.value)}
+            />
+          </div>
+        </motion.div>
+        
         <a href="#question5" className="next__btn">
           Next &nbsp;
           <span>

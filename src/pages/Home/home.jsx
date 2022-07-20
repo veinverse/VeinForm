@@ -14,8 +14,7 @@ const Home = () => {
         <div className="main__text">
           <h1>Hi there,</h1>
           <h2>
-            We’ll like to know a bit about your business experience with
-            technology.
+            We’ll like to know a bit about your business.
           </h2>
           <button onClick={navigateToForm}>
             <h1 className="home__button-text">Get Started </h1>

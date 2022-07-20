@@ -28,19 +28,7 @@ const childVariant = {
   },
 };
 
-const Q2 = (props) => {
-
-  const click = (e)=>{
-    const {checked,value}= e.target   
-        if(checked===true){
-         localStorage.setItem(`${value}`, value)}
-      props.setState2([localStorage])  
-        if(checked===false){
-          localStorage.removeItem(`${value}`)
-        }
-      }
-
-      
+const Q2 = ({setState2}) => {
 
   const controls = useAnimation();
   const { ref, inView } = useInView();
@@ -61,141 +49,22 @@ const Q2 = (props) => {
       animate={controls}
       className="q__wrapper"
       id="question2"
+      ref={ref}
     >
       <h1>Question 2</h1>
-      <h2>Where do you mostly hold your business activities?</h2>
-      <p style={{ color: "white", fontWeight: 600, paddingTop: "10px" }}>
-        Select any three (3) regions
-      </p>
-      <motion.div
-        variants={childVariant}
-        className="choice__wrapper grid__container"
-        ref={ref}
-      >
-        <div className="option grid__item">
+      <h2>Kindly enter your email address</h2>
+      <div className="choice__wrapper">
+        <div className="option">
           <input
-            type="checkbox"
-            value="Greater Accra"
-            id="accra"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click} 
+            type="email"
+            placeholder="Email"
+            name="email"
+            className="text_enter"
+            onChange={(e)=>setState2(e.target.value)}
           />
-          <label for="accra">Greater Accra</label>
         </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Eastern" id="eastern" name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="eastern">Eastern</label>
-        </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Central" id="central" name="Where do you mostly hold your business activities?"    
-          onChange={click}     
-  
-          />
-          <label for="central">Central</label>
-        </div>
-        <div className="option grid__item">
-          <input
-            type="checkbox"
-            value="North East"
-            id="northEast"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="northEast">North East</label>
-        </div>
-        <div className="option grid__item">
-          <input
-            type="checkbox"
-            value="Northern"
-            id="northern"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="northern">Northern</label>
-        </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Ahafo" id="ahafo" name="Where do you mostly hold your business activities?"    
-          onChange={click}     />
-          <label for="ahafo">Ahafo</label>
-        </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Ashanti" id="ashanti" name="Where do you mostly hold your business activities?"    
-          onChange={click}     />
-          <label for="ashanti">Ashanti</label>
-        </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Bono East" id="bono" name="Where do you mostly hold your business activities?"    
-          onChange={click}     />
-          <label for="bono">Bono East</label>
-        </div>
-        <div className="option grid__item">
-          <input
-            type="checkbox"
-            value="Brong Ahafo"
-            id="brongAhafo"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="brongAhafo">Brong Ahafo</label>
-        </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Oti" id="oti" name="Where do you mostly hold your business activities?"    
-          onChange={click}     />
-          <label for="oti">Oti</label>
-        </div>
-        <div className="option grid__item">
-          <input
-            type="checkbox"
-            value="Savannah"
-            id="savannah"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="savannah">Savannah</label>
-        </div>
-        <div className="option grid__item">
-          <input
-            type="checkbox"
-            value="Upper East"
-            id="upperEast"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="upperEast">Upper East</label>
-        </div>
-        <div className="option grid__item">
-          <input
-            type="checkbox"
-            value="Upper West"
-            id="upperWest"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="upperWest">Upper West</label>
-        </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Western" id="western" name="Where do you mostly hold your business activities?"    
-          onChange={click}     />
-          <label for="western">Western</label>
-        </div>
-        <div className="option grid__item">
-          <input
-            type="checkbox"
-            value="Western North"
-            id="westernNorth"
-            name="Where do you mostly hold your business activities?"    
-          onChange={click}    
-          />
-          <label for="westernNorth">Western North</label>
-        </div>
-        <div className="option grid__item">
-          <input type="checkbox" value="Volta" id="volta" name="Where do you mostly hold your business activities?"    
-          onChange={click}     />
-          <label for="volta">Volta</label>
-        </div>
-      </motion.div>
+      </div>
+
       <a href="#question3" className="next__btn">
         <p className="btn__text">
           Next &nbsp;

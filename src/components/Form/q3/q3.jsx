@@ -1,7 +1,11 @@
-import gadgets from "../../../photos/gadgets.jpg";
+import contact from "../../../photos/contact.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import ReactPhoneInput, { isPossiblePhoneNumber } from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
 
 const containerVariant = {
   hidden: {
@@ -48,31 +52,38 @@ const Q3 = ({setState3}) => {
     }
   }, [inView, controls]);
 
+  const [value, setValue] = useState();
+
   return (
     <div className="imq__body" id="question3">
       <div className="q__wrapper">
         <h1>Question 3</h1>
-        <h2>Which gadget do you use the most for your business activities?</h2>
-        <motion.div
-          variants={containerVariant}
-          initial="hidden"
-          animate={controls}
-          className="choice__wrapper"
-          ref={ref}
-        >
-            <div className="option">
-                        <input type="radio" value="Laptop" id="laptop" name="Which gadget do you use the most for your business activities?"  onChange={handleChange}/>
-                        <label for="laptop">Laptop</label>
-                    </div>
-                    <div className="option">
-                        <input type="radio" value="Tablet" id="tablet" name="Which gadget do you use the most for your business activities?"  onChange={handleChange}/>
-                        <label for="tablet">Tablet</label>
-                    </div>
-                    <div className="option">
-                        <input type="radio" value="Mobile Phone" id="phone" name="Which gadget do you use the most for your business activities?"  onChange={handleChange}/>
-                        <label for="phone">Mobile Phone</label>
-                    </div>
-        </motion.div>
+        <h2>May we have your contact number?</h2>
+        <div className="choice__wrapper">
+          <div className="option">
+            <ReactPhoneInput
+                country={"gh"}
+                value = {value}
+                onChange = {() => handleChange}
+                error = {value && isPossiblePhoneNumber(value) ? "true" : "false"}
+                buttonStyle={{background: 'none', border: 'solid #f4e6b1', borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px'}}
+                enableSearch={true}
+                inputProps={{
+                  style: {
+                    display: 'block',
+                    width: '100%',
+                    padding: '1.8rem 3rem',
+                    cursor: 'pointer',
+                    border: '2px solid #f4e6b1',
+                    borderRadius: '12px',
+                    background: 'none',
+                    fontSize: '18px',
+                    color: '#ffffff',
+                  },
+                }}
+              />
+          </div>
+        </div>
 
         <motion.a href="#question4" className="next__btn">
           Next &nbsp;
@@ -92,7 +103,7 @@ const Q3 = ({setState3}) => {
         </motion.a>
       </div>
       <div className="img__wrapper">
-        <img src={gadgets} alt="gadgets" />
+        <img src={contact} alt="contact" />
       </div>
     </div>
   );

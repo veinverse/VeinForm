@@ -29,11 +29,6 @@ const childVariant = {
 };
 
 const Q1 = ({setState1}) => {
-  const handleChange = e => {
-    const { value } = e.target;
-
-    setState1(value);
-  }
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -56,31 +51,18 @@ const Q1 = ({setState1}) => {
       ref={ref}
     >
       <h1>Question 1</h1>
-      <h2>What do you do?</h2>
-      <motion.div variants={childVariant} className="choice__wrapper">
-      
-        <div className="option">
-          <input type="radio" value="Event Planning" id="ep" name="What do you do?" onChange={handleChange}  />
-          <label for="ep">Event Planning</label>
-        </div>
-        <div className="option">
-          <input type="radio" value="Own a Studio" id="studio" name="What do you do?"onChange={handleChange}  />
-          <label for="studio">Own a Studio</label>
-        </div>
+      <h2>Kindly enter your full name</h2>
+      <div className="choice__wrapper">
         <div className="option">
           <input
-            type="radio"
-            value="Manage a Restaurant"
-            id="restaurant"
-            name="What do you do?" onChange={handleChange} 
+            type="text"
+            placeholder="Full Name"
+            name="fname"
+            className="text_enter"
+            onChange={(e)=>setState1(e.target.value)}
           />
-          <label for="restaurant">Manage a Restaurant</label>
         </div>
-        <div className="option">
-          <input type="radio" value="Other" id="other" name="What do you do?" onChange={handleChange}  />
-          <label for="other">Other</label>
-        </div>
-      </motion.div>
+      </div>
 
       <motion.a variants={childVariant} href="#question2" className="next__btn">
         Next &nbsp;

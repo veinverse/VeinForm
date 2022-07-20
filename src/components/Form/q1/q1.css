@@ -77,6 +77,12 @@ label {
   display: none;
 }
 
+/* phone number input */
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+  background: none !important;
+}
+/* end of phone number input */
+
 .next__btn {
   padding: 0.9rem 1.8rem;
   display: flex;
@@ -140,4 +146,15 @@ label {
   label {
     padding: 0.8rem 0.6rem;
   }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: none;
 }
